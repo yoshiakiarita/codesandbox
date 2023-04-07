@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+        svg {
+            height: 150px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <line x1="50" y1="50" x2="150" y2="150" stroke="#000000" id="line" />
+        <rect x="160" y="50" width="100" height="100" fill="#c80000" id="rect" />
+    </svg>
+    <script>
+        var lineElement = document.getElementById('line');
+        var rectElement = document.getElementById('rect');
+        lineElement.addEventListener('click', alertLineMessage, false);
+        rectElement.addEventListener('click', alertRectMessage, false);
+        function alertLineMessage(){
+            alert('線がクリックされました');
+        }
+        function alertRectMessage(){
+            alert('四角形がクリックされました');
+        }
+    </script>
+    <svg style="display: block;" width="500px" height="530px" viewBox="0 0 500 530" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <title>Artboard 1</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="Artboard-1" sketch:type="MSArtboardGroup">
+                <g id="Group" sketch:type="MSLayerGroup" transform="translate(69.000000, 68.000000)">
+                    <path d="M0.28515625,0.72265625 L361,0.72265625 L328,371 L180.642578,411 L31,371 L0.28515625,0.72265625 Z" id="Rectangle-1" stroke="#979797" fill="#E44D26" sketch:type="MSShapeGroup"></path>
+                    <path d="M179.5,31 L328,31 L300,347 L179.5,381 L179.5,31 Z" id="Rectangle-2" fill="#F16529" sketch:type="MSShapeGroup"></path>
+                    <path d="M80,237 L126,237 L130,273 L180,286 L180,334 L87,308 L80,237 Z" id="Rectangle-3" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+                    <path d="M120.132812,168 L180,168 L180,214 L78.4199219,214 L65.8369141,76 L180,76 L180,122 L116.202148,122 L120.132812,168 Z" id="Rectangle-3" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+                    <path d="M180,122 L180,76 L294.035156,76 L290.071289,122 L180,122 Z" id="Rectangle-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M180,168 L285.719727,168 L273,308 L180,335 L180,286 L230,273 L235,214 L180,214 L180,168 Z" id="Rectangle-6" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+</body>
+</html>
