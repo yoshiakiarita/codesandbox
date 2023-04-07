@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptで動画を制御しよう</title>
+    <link rel="stylesheet" href="./src/reset.css">
+    <link rel="stylesheet" href="./src/stylej.css">
+</head>
+<body>
+<video id="video">
+    <source src="./video/video.mp4" type="video/mp4">
+    <source src="./video/video.webm" type="video/webm">
+</video>
+<div class="buttonBlock">
+    <span><button type="button" onClick="playVideo();">▶︎</button></span>
+    <span><button type="button" onClick="pauseVideo();">Ⅱ</button></span>
+</div>
+<p id="comment" class="comment"></p>
+<script src="./src/js.js"></script>
+</body>
+</html>
