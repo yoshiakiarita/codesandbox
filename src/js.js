@@ -1,11 +1,10 @@
-var videoElement = document.getElementById("video"),
+let videoElement = document.getElementById("video"),
   comment = document.getElementById("comment");
 
 //動画を再生する関数
 function playVideo() {
   videoElement.play();
   comment.innerHTML = "動画再生中";
-  console.log(element.innerHTML);
 }
 
 //動画を一時停止する関数

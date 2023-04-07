@@ -117,29 +117,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/js.js":[function(require,module,exports) {
-var videoElement = document.getElementById("video"),
-  comment = document.getElementById("comment");
+})({"src/canvas.js":[function(require,module,exports) {
+var canvas = document.getElementById("workSpace");
+context = canvas.getContext("2d");
 
-//動画を再生する関数
-function playVideo() {
-  videoElement.play();
-  comment.innerHTML = "動画再生中";
-}
+//path（軌跡）を始めるということを宣言する
+context.beginPath();
+//pathの開始座標を指定する
+context.moveTo(50, 50);
+//座標を指定してpathを引いていく
+context.lineTo(150, 150);
+//現在のpathを描画する
+context.stroke();
 
-//動画を一時停止する関数
-function pauseVideo() {
-  videoElement.pause();
-  comment.innerHTML = "動画が一時停止されました";
-}
-
-//動画再生が終了した時の文言を表示する関数
-function displayEndComment() {
-  comment.innerHTML = "動画再生終了<br>もう一度見たい場合は再生ボタンを押してください";
-}
-
-//動画再生終了時のイベント発火時の処理
-videoElement.addEventListener("ended", displayEndComment, false);
+//矩形の色を指定
+context.fillStyle = "#a00000";
+//矩形を描画する
+context.fillRect(160, 50, 100, 70);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -309,5 +303,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js.js"], null)
-//# sourceMappingURL=/js.f7e8029a.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/canvas.js"], null)
+//# sourceMappingURL=/canvas.340782d3.js.map
